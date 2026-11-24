@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Name>Verboten</Name>
+    <Author>Readux</Author>
+    <Version>0.2.0</Version>
+    <Description><![CDATA[[h1]Verboten – Base Claims & Anti-Griefing[/h1]
+[b]Build an autolathe. Your base is protected.[/b]
+Only the server needs this mod. Players install nothing – no BepInEx, no mods, they just join.
+
+[h2]How it works[/h2]
+[list]
+[*][b]Claim:[/b] Your first autolathe protects a 10 x 10 m field around it – no limit up or down.
+[*][b]Grow:[/b] Look where you want more room and type [i]/claim grow[/i]: the next 10 x 10 m field joins your claim. L, T, + or any shape you like.
+[*][b]Pay as you play:[/b] Every player starts with 300 m² and earns more by playing. When that is used up, steel from your autolathe pays – the price is shown before anything is taken.
+[*][b]Claim slots:[/b] Everyone has 3 slots of up to 50 x 50 m – three small bases or one big one. Your own claims may touch each other.
+[*][b]Build together:[/b] Friends donate their slots to your claim, so a group can build big. Taking them back has consequences – no tricks.
+[*][b]Share:[/b] Friends can do everything, guests may come in and use doors and devices. Everyone else stays out.
+[/list]
+
+[h2]Everything is protected[/h2]
+Building, deconstructing, devices, containers, pipes, cables, rooms, mining, weapons and explosions. Strangers who walk in get a warning and are disconnected after 3 seconds – the third time, they are locked out for 30 minutes. Their robots stay out too.
+
+[h2]Fair for everyone[/h2]
+[list]
+[*]The landing zone stays free, and there are always at least 10 m between two players' bases.
+[*]If one of your own machines blows up, it does damage as usual – any other explosion does no harm in your base.
+[*]Away for 7 days? Your base counts as abandoned, shows up on the tracker and may be taken over. Come back before someone does, and it is protected again.
+[/list]
+
+[h2]Hard to cheat[/h2]
+Every action is tied to the player who really sent it – not to whoever their game claims to be. Faked names don't help, an optional PIN guards players on IP connections, and spawn and creative cheats from players are blocked in survival.
+
+[h2]Commands[/h2]
+[code]/claim check          can I protect my base here?
+/claim show           borders and landing zone, marked with flares
+/claim grow           one more field where you look
+/claim add <player>   friend (add "guest" for a guest)
+/claim donate <n>     give a friend's claim some of your slots
+/claim help           four pages with everything else[/code]
+
+[h2]Setup[/h2]
+On the host or dedicated server: BepInEx 5 + StationeersLaunchPad, subscribe, done. Works without any setup. Language (English/Deutsch), slots, start area, prices, expiry and admins are in [i]BepInEx/config/verboten.stationeers.cfg[/i] on the host or server. Players' own copies of the file have no effect on a server.
+
+Early version – feedback and bug reports are very welcome!
+Source code (MIT): [url=https://github.com/R3adux/Verboten]github.com/R3adux/Verboten[/url]
+]]></Description>
+    <Tags />
+    <Dependencies />
+    <LoadBefore />
+    <LoadAfter />
+    <InGameDescription><![CDATA[Base claims & anti-griefing. Build an autolathe – your base is protected; grow it field by field. Only the host needs this mod.]]></InGameDescription>
+</ModMetadata>

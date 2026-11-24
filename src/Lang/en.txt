@@ -1,0 +1,919 @@
+# Verboten – texts players read. English (the reference; every other language has the same keys).
+# Tone: a very correct German property office writing in English – polite, strict, with a wink. Content stays clear.
+# A text runs from its [key] line to the next one. {placeholders} are filled in by the mod – keep them.
+# Commands (/claim …) stay English in every language.
+
+# ---------------------------------------------------------------- general words
+
+[anchor.autolathe]
+autolathe
+
+[anchor.flag]
+flag
+
+[claim.default_name]
+{owner}'s base
+
+[size.max]
+{max} m
+
+[marker.name]
+Derelict: {claim}
+
+[role.owner]
+owner (everything)
+
+[role.friend]
+friend (everything except adding or removing people)
+
+[role.guest]
+guest (may come in and use doors and switches – no building, no containers)
+
+[role.none]
+no access
+
+[dir.north]
+north
+
+[dir.north-east]
+north-east
+
+[dir.east]
+east
+
+[dir.south-east]
+south-east
+
+[dir.south]
+south
+
+[dir.south-west]
+south-west
+
+[dir.west]
+west
+
+[dir.north-west]
+north-west
+
+[side.north]
+North
+
+[side.east]
+East
+
+[side.south]
+South
+
+[side.west]
+West
+
+[hint.move]
+Kindly move about {m} m {dir}.
+
+[problem.landing]
+{m} m too close to the landing zone
+
+[problem.gap]
+{m} m too close to {claim} (regulations require {gap} m between two claims)
+
+[reach.min]
+a side must reach at least {m} m from the {anchor}
+
+[reach.max]
+a side may reach at most {m} m from the {anchor}
+
+[reach.span]
+a claim may be at most {max}
+
+[more]
+Everything else: /claim help
+
+[join.rules]
+Betreten VERBOTEN! Other people's bases are off limits without the owner's permission – trespassers will be shot – sorry – disconnected after {seconds} seconds.
+
+[join.commands]
+Before you build: /claim check – borders: /claim show – house rules: /claim help
+
+[join.abandoned]
+Derelict bases up for grabs: {count}. Lost property office: /claim find
+
+[join.pin_locked]
+You are joining from a new address. Your property rights are suspended until you enter your PIN: /claim pin <your PIN>
+
+[join.rejected]
+Verboten: entry refused ({reason}).
+
+[join.blocked]
+banned from the premises for {minutes} more minute(s) for trespassing on other players' bases
+
+# ---------------------------------------------------------------- explanations (windows)
+
+[roles]
+Who may do what on your property:
+  Friends: everything except adding or removing people
+  Guests: come in, use doors and switches – no building, no containers
+  Everyone else: kindly wait outside.
+
+[expiry]
+It stays protected as long as you or a friend drop by at least every {days} days. After that it is considered derelict and may be taken over by others.
+
+[how.flags]
+Stake out your plot: a flag at each corner of your base ({flags} flags). The outermost flags mark the border, from {min} up to {max}. Another flag next to it moves the border out, taking one down moves it in.
+
+[how.growing]
+Build your {anchor} in the middle of your base: it protects one field of 10 x 10 m. You add more fields with /claim grow – {free} m² to start with are on your account.
+
+[how.fit]
+Build your {anchor} in your base: it protects everything you built around it, plus 5 m – and grows with your base (up to {max}).
+
+[guide.title]
+Betreten VERBOTEN! Bases on this server are protected – soon yours too.
+
+[guide.limits]
+Not permitted: within {landing} m of the landing zone or closer than {gap} m to another base.
+
+[guide.here]
+At this very spot: {verdict}
+
+[guide.verdict.ok]
+possible – your base can be protected.
+
+[guide.verdict.ok_flags]
+possible – a flag at each corner of your base.
+
+[guide.verdict.abandoned]
+a derelict base – build your {anchor} here and it is yours.
+
+[guide.hint]
+No base can be protected here: {problem}
+
+[created.title]
+Your property is now under protection: {claim}
+
+[created.size]
+{w} x {d} m – the border is marked for 30 seconds.
+
+[created.add]
+Add a friend: /claim add <player>
+
+[created.move]
+Moving this {anchor}: first build the new one on your claim, then take this one down. With no {anchor} left on the claim, the protection ends.
+
+[pin.tip]
+Tip: /claim pin <code> (up to {max} characters) keeps your base yours even if someone fakes your identity.
+
+[takenover.title]
+This base is now yours: {claim}
+
+[takenover.size]
+{w} x {d} m. The previous owner was away for too long. The border is marked for 30 seconds.
+
+[takenover.add]
+  Add a friend:   /claim add <player>
+
+[takenover.grow_meters]
+  Make it bigger:   look in a direction and type /claim grow – one 10 x 10 m field at a time
+
+[takenover.grow_fit]
+  It grows with your base as you build on.
+
+[takenover.grow_staked]
+  More flags next to it move the border out.
+
+[refused]
+Your {anchor} stands, but this spot cannot be protected:
+{reason}
+
+[refused.tip]
+Tip: /claim check (planning permission) tells you beforehand. You can take the {anchor} down and put it up elsewhere.
+
+[stake.refused]
+These flags cannot stake a claim here:
+{reason}
+
+[stake.refused.tip]
+Tip: /claim check tells you beforehand; /claim show shows borders and the landing zone.
+
+[ended]
+{claim} is no longer under protection: its {anchor} was taken down or destroyed, and there is no other {anchor} on it.
+
+Build a new {anchor} to protect your base again.
+
+[stake.ended]
+{claim} is no longer under protection: fewer than {flags} of its flags are left standing.
+
+Stake it out again with a flag at each corner.
+
+# ---------------------------------------------------------------- claims: creating, growing, flags
+
+[anchor.backup]
+This {anchor} keeps {claim} alive should you take the other one down. Your claim stays exactly as it is. Or register another one.
+
+[anchor.handover]
+{claim} now belongs to the {anchor} at ({x}, {z}). Your claim stays exactly as it is.
+
+[eval.inside]
+You are standing on {claim}.
+
+[eval.limit]
+All your {max} claim slots are in use (your own claims or donated). One has to become free before you can found another claim.
+
+[eval.abandoned]
+This is the derelict base of {owner} – you may take it over.
+
+[eval.foreign]
+There are structures of {player} here. Registering someone else's base is not permitted.
+
+[eval.ok]
+Your base can be protected here.
+
+[eval.created]
+{claim} registered.
+
+[fit.note]
+Not all of your base is covered – there are structures of {players} in it or right next to it. If you build together, add them as friends: /claim add <player>
+
+[takeover.foreign]
+Too many structures of {player} on this claim – it cannot be taken over.
+
+[takeover.too_close]
+{claim} has grown too close – there is no room left to take this base over.
+
+[takeover.done]
+This base is now yours: {claim}.
+
+[takeover.notice]
+Your base {claim} was taken over by {player} because you were away for more than {days} days.
+
+[grow.side_limit]
+{side}: {limit}.
+
+[foreign.zone]
+{player} has built there – a claim keeps {zone} m away from other players' buildings.
+
+[stake.too_big]
+Your flags span {w} x {d} m – a claim may be at most {max}.
+
+[stake.too_big.hint]
+Kindly move the outer flags closer together.
+
+[stake.foreign]
+There are structures of {player} inside. Registering someone else's base is not permitted.
+
+[stake.done]
+{claim} staked out.
+
+[steel.no_lathe]
+Growing beyond your free meters is paid with steel from the claim's autolathe – there is none on this claim.
+
+[steel.not_enough]
+This costs {need} steel, but the autolathe only holds {have}. Kindly put steel ingots into it first.
+
+[flags.resize]
+This claim is staked out with flags: another flag next to it makes it bigger, taking one down makes it smaller.
+
+[flag.cannot_move]
+This flag cannot move the border of {claim}: {why}.
+
+[flag.moved]
+{claim} now reaches this flag: {w} x {d} m.
+
+[flag.too_far]
+This flag is too far from your claim to move its border (at most {max}).
+
+[flag.count]
+Flag {n} of {flags}. One at each corner of your base – the outermost flags mark the border.
+
+[flag.removed]
+A flag was taken down: {claim} now measures {w} x {d} m.
+
+# ---------------------------------------------------------------- strangers, protection
+
+[trespass.approach]
+Attention, private property: {claim}. Trespassers will be removed from the server after {seconds} seconds. No building or dumping here.
+
+[trespass.inside]
+You are on {claim} without permission. Kindly leave the premises within {seconds} seconds.
+
+[trespass.kicked]
+You were removed from the server for trespassing on {claim}. Ordnung muss sein.
+
+[trespass.blocked]
+You were removed from the server for repeatedly trespassing on {claim}. Banned from the premises: {minutes} minutes.
+
+[denied.attack]
+{claim} is private property. Attacking and altering: VERBOTEN.
+
+[denied.drop]
+{claim} is private property. Dumping and throwing: VERBOTEN.
+
+[denied.build]
+{claim} is private property. Building and altering: VERBOTEN.
+
+[denied.take]
+{claim} is private property. Taking and rearranging: VERBOTEN.
+
+[denied.dig]
+{claim} is private property. Digging: VERBOTEN.
+
+[denied.use]
+{claim} is private property. Using things: VERBOTEN.
+
+[denied.other]
+{claim} is private property. That is VERBOTEN here.
+
+[incident.entered]
+{player} entered without permission
+
+[incident.attack]
+{player} tried to attack or alter things
+
+[incident.drop]
+{player} tried to dump or throw things
+
+[incident.build]
+{player} tried to build or alter things
+
+[incident.take]
+{player} tried to take or rearrange items
+
+[incident.dig]
+{player} tried to dig
+
+[incident.use]
+{player} tried to use things
+
+[incident.other]
+{player} tried something
+
+[away]
+Incident report for your absence: {list}.
+
+[away.repeat]
+{line} ({count}x)
+
+[landing.denied]
+On this server only admins may build or take things apart at the landing zone.
+
+[marker.locked]
+This beacon marks a derelict base and must not be altered.
+
+[cheats.disabled]
+Cheating is VERBOTEN on this server.
+
+[cheat.kicked]
+Disconnected: cheating is VERBOTEN on this server. The admins have been informed.
+
+[chat.slow]
+No queue-jumping, please – one command per second.
+
+[chat.player_suffix]
+(player)
+
+# ---------------------------------------------------------------- coming back, derelict bases
+
+[welcome_back]
+Welcome back! {claim} is under protection again.
+
+[welcome_back_failed]
+Welcome back! {claim} could not be protected again – other bases are too close by now.
+
+[abandoned.enter_take]
+{owner} has given up this base – it is derelict. Type /claim take and it is yours.
+
+[abandoned.enter_build]
+{owner} has given up this base – it is derelict. Build a {anchor} here and it is yours.
+
+# ---------------------------------------------------------------- /claim commands
+
+[cmd.server_only]
+Claims are handled by the server.
+
+[cmd.locked]
+You are joining from a new address. Your PIN first, please: /claim pin <your PIN>
+
+[cmd.error]
+Something went wrong while running the command (see the server log).
+
+[help.members]
+Friends: {friends}   Guests: {guests}
+
+[help.roles]
+Friends: everything except adding or removing people
+Guests: come in, use doors and switches – nothing else
+Everyone else: kindly waits outside. There is nothing for them to touch anyway.
+
+[help.expiry]
+Protected as long as you or a friend drop by at least every {days} days. After that it is derelict and anyone may take it over.
+
+[info.need_inside]
+Kindly stand on the claim to use /claim info.
+
+[info.not_inside]
+You are not standing on a claim.
+
+[info.you]
+  You: {role}
+
+[info.expiry]
+  Stays protected as long as the owner or a friend drops by at least every {days} days.
+
+[info.next_meter_have]
+, the autolathe holds {have}
+
+[need_character]
+For that you need a character in the world.
+
+[need_character_borders]
+To see borders you need a character in the world.
+
+[check.abandoned_take]
+Possible here: {message} Type /claim take.
+
+[check.abandoned_build]
+Possible here: {message} Build a {anchor} here.
+
+[check.flags]
+Possible here: a flag at each corner of your base ({flags} flags).
+
+[check.ok]
+Possible here – planning permission granted: your {anchor} can protect your base here.
+
+[check.ok_size]
+Possible here – planning permission granted: your {anchor} can protect your base here, about {w} x {d} m.
+
+[show.none]
+No claims and no landing zone within {range} m.
+
+[show.some]
+Showing {count} border(s) near you for 30 seconds.
+
+[find.none]
+There are no derelict bases at the moment.
+
+[find.inside]
+You are standing in the derelict base of {owner}. /claim check tells you how to take it over.
+
+[find.nearest]
+Nearest derelict base: {claim}, about {m} m {dir}.
+
+[take.not_inside]
+Kindly stand in a derelict base to take it over (see /claim find).
+
+[take.no_anchor]
+There is no {anchor} on this base any more. Build one to take it over.
+
+[add.usage]
+Usage: /claim add <player> [guest]
+
+[add.is_owner]
+{player} owns this claim.
+
+[add.done]
+{player} is now registered as {role} on {claim}.
+
+[add.refit]
+The claim now also covers {player}'s part of the base: {w} x {d} m.
+
+[remove.usage]
+Usage: /claim remove <player>
+
+[remove.not_member]
+{player} is not registered on {claim}.
+
+[remove.done]
+{player} was removed from {claim}.
+
+[name.usage]
+Usage: /claim name <name>   (max. {max} characters)
+
+[name.taken]
+There is already a claim called '{name}'.
+
+[name.done]
+Claim renamed to '{name}'.
+
+[resize.usage]
+Look at the side you want to move and type /claim {verb} <meters> – e.g. /claim {verb} 5.
+
+[resize.fit]
+On this server claims grow by themselves: keep building at the edge and the border follows (up to {max}).
+
+[resize.need_inside]
+Kindly stand on the claim to change its size.
+
+[resize.only_owner]
+Only the owner ({owner}) may change the size.
+
+[resize.not_possible]
+Not possible: {error}
+
+[resize.no_lathe]
+The accounts are empty, and there is no autolathe on this claim to pay with steel.
+
+[resize.cost_extra]
+ plus {area} m² from the accounts
+
+[resize.done]
+The {side} side moved out {m} m – {claim} is now {w} x {d} m.
+
+[owner.usage]
+Usage: /claim owner <player>
+
+[owner.need_inside]
+Kindly stand on the claim you want to hand over.
+
+[owner.only_owner]
+Only the owner ({owner}) may hand it over.
+
+[owner.already]
+{player} already owns it.
+
+[owner.limit]
+{player} does not have enough free claim slots for this claim.
+
+[owner.done]
+{claim} now belongs to {player}. {old} is registered on it as a friend.
+
+[owner.notify]
+{old} has handed {claim} over to you.
+
+[delete.admin_only]
+Kindly use /claim delete while standing on your claim.
+
+[delete.need_inside]
+Kindly stand on your claim to delete it.
+
+[delete.only_owner]
+Only the owner ({owner}) may delete it.
+
+[delete.done]
+{claim} deleted. The area is no longer under protection.
+
+[list.none]
+There are no claims in this world.
+
+[list.count]
+{count} claim(s):
+
+[describe.line]
+{claim}{state} – owner {owner}, {w} x {d} m
+
+[describe.reach]
+ (N {n}, E {e}, S {s}, W {west} m from the {anchor})
+
+[describe.abandoned]
+ [DERELICT]
+
+[describe.friends]
+  Friends: {list}
+
+[describe.guests]
+  Guests: {list}
+
+[manage.need_inside]
+Kindly stand on your claim to do that.
+
+[manage.only_owner]
+Only the owner ({owner}) may do that.
+
+[admin.many]
+{text} owns {count} claims; kindly use the claim name (see /claim list).
+
+[admin.none]
+No claim and no owner '{text}' found.
+
+[resolve.empty]
+Kindly name the player.
+
+[resolve.several]
+Several players are called '{text}'. Kindly use their SteamID64 instead.
+
+[resolve.none]
+Nobody called '{text}' has ever been on this server. Kindly use the exact name or their SteamID64.
+
+[console.only_world]
+only available inside a world.
+
+[console.client]
+claims are handled by the server; use /claim in the chat (admins: serverrun claim ...).
+
+# ---------------------------------------------------------------- PIN
+
+[pin.console_usage]
+Usage on the console: claim pin off <player>  (removes a player's PIN)
+
+[pin.status_has]
+You have a PIN. Change it: /claim pin <new>   Remove it: /claim pin off
+
+[pin.status_none]
+No PIN on file. /claim pin <code> (up to {max} characters) keeps your bases yours if someone fakes your identity on a server without Steam login.
+
+[pin.admin_only]
+Only admins may remove someone else's PIN.
+
+[pin.none_for]
+{player} has no PIN.
+
+[pin.removed_for]
+The PIN of {player} has been removed.
+
+[pin.first]
+Your PIN first, please: /claim pin <your PIN>
+
+[pin.removed]
+Your PIN has been removed.
+
+[pin.length]
+A PIN has 1 to {max} characters.
+
+[pin.set]
+PIN on file. Should you ever join from a new address, /claim pin <your PIN> is all it takes and your bases are yours again.
+
+[pin.set_steam]
+ (On this server Steam confirms who you are, so you will not need it here.)
+
+[pin.wait]
+Too many wrong PINs. Kindly try again in {minutes} minute(s).
+
+[pin.wrong]
+Wrong PIN.
+
+[pin.wrong_wait]
+Wrong PIN. Next attempt in {minutes} minutes.
+
+[pin.ok]
+PIN correct – welcome back. Your bases are yours again.
+
+# ---------------------------------------------------------------- for the host
+
+[host.protection_missing]
+Verboten: protection '{name}' is NOT active (game update?). See the log or 'claim status'.
+
+[host.feature_missing]
+Verboten: '{name}' is not working (game update?). See the log or 'claim status'.
+
+[host.claims_unreadable]
+Verboten could not read the claims of this save. All claims are OFF. See the log.
+
+[host.console_failed]
+Verboten: the 'claim' console command could not be registered (game update?).
+
+[guide.next]
+Your first {anchor} protects your base, after that everything else via: /claim help
+
+[guide.next_flags]
+Stake out your base with {flags} flags – one at each corner – after that everything else via: /claim help
+
+[help.window_title]
+Verboten – house rules
+
+[help.yours]
+{claim} – {w} x {d} m – you: {role}
+
+[help.yours_none]
+You do not own any property yet.
+
+[help.slogan]
+Trust is good, Verboten is better.
+
+[help.h_property]
+Your property
+
+[help.h_roles]
+Who may do what
+
+[help.h_size]
+Size
+
+[help.size_fit]
+A claim covers everything you built around your {anchor}, plus 5 m, and grows with your base as you build on – up to {max}.
+
+[help.size_flags]
+Put a flag at each corner of your base ({flags} flags) – the outermost mark the border, from 10 x 10 up to {max}. Another flag next to it moves the border out, taking one down moves it in.
+
+[help.not_permitted]
+<b>Not permitted:</b> within {landing} m of the landing zone or closer than {gap} m to another base.
+
+[help.moving]
+<b>Moving the {anchor}:</b> build the new one on your claim first, only then take the old one down.
+
+[help.h_expiry]
+Expiry
+
+[help.h_commands]
+Commands
+
+[help.cmd_look]
+/claim help [1–4] – these windows
+/claim check – may I build my base here?
+/claim show – shows nearby borders for 30 seconds
+/claim find – the nearest derelict base
+/claim info – details of the claim you are standing on
+
+[help.cmd_grow]
+/claim grow – adds one field (10 x 10 m) in the direction you look
+
+[help.cmd_people]
+/claim add <player> [guest] – register a friend (or a guest)
+/claim remove <player> – take someone off your claim
+/claim name <name> – give your claim a name
+
+[help.cmd_owning]
+/claim owner <player> – hand your claim over to someone
+/claim delete – give your claim up
+/claim take – take over a derelict base
+
+[help.cmd_pin]
+/claim pin <code> – optional: keeps your bases yours, even against fake identities
+
+[help.cmd_admin]
+<b>Admin:</b> /claim list · info · shrink (looking at the field) · delete · pin off <player> · status
+
+[role_short.owner]
+owner
+
+[role_short.friend]
+friend
+
+[role_short.guest]
+guest
+
+[role_short.none]
+visitor
+
+[resize.shrink_admin]
+Only admins can make a claim smaller – and only claims that are not their own.
+
+[verdict.no]
+not possible – {reason}
+
+[check.no]
+Not possible here: {reason}
+
+[info.price]
+  Steel price now: {price} per m²
+
+[resize.done_shrink]
+The {side} side moved in {m} m – {claim} is now {w} x {d} m.
+
+[help.cmd_slots]
+/claim donate <number> – donate claim slots to the claim you stand on (0 = take them back)
+/claim pay – pay the penalty when your claim is short of a slot
+
+[help.yours_fields]
+{claim} – {fields} fields, {w} x {d} m – you: {role}
+
+[help.slots_used]
+Uses {need} slot(s) – {own} of yours
+
+[help.slots_used_donated]
+Uses {need} slots – {own} of yours, donated by: {donors}
+
+[help.penalty_open]
+Short of {missing} slot(s): /claim pay – or it shrinks in {time} (see /claim help 3).
+
+[help.free_slots]
+Free claim slots: {free} of {max}
+
+[help.account]
+Area on your account: {area} m²
+
+[help.you_donate]
+You donate {n} to {claim}.
+
+[help.size_fields]
+A claim starts as one field of 10 x 10 m around its {anchor}. It grows field by field: look in the direction you want and type /claim grow – the next field that way is added. Shapes like L, T or + are fine. Every field costs 100 m², paid with:
+1.<indent=1.4em>your account: {free} m² to start with, plus {perhour} m² for every hour you are online,</indent>
+2.<indent=1.4em>then the accounts of your donors,</indent>
+3.<indent=1.4em>after that steel from the {anchor} – /claim grow names the price and asks before it takes anything.</indent>
+
+[help.h_map]
+Site plan
+
+[help.map_north]
+N
+
+[help.map_legend]
+{field} field · {anchor} · • you
+
+[help.h_slots]
+Claim slots
+
+[help.slots]
+Everyone has {max} claim slots. One is enough for 50 x 50 m: a claim needs one for every started 50 m in each direction – 100 x 50 m takes two, 150 x 50 m three. So you can have several claims or a few big ones. Your own claims may touch each other; to anyone else's, 10 m stay free.
+
+[help.donate]
+<b>Donating:</b> friends can donate slots to the claim they are registered on (/claim donate <number>). Then it may grow bigger, and their account helps to pay.
+
+[help.penalty]
+<b>Penalty:</b> if a friend takes their donation back (or is taken off the claim), your free slots step in first. If they are not enough, the claim cannot grow any more and you have {hours} hours – counted only while you are online: /claim pay costs five times the price of the built area that would otherwise be lost – then everything stays as it is. Otherwise it shrinks to 50 x 50 m around the autolathe. A new donation helps as well.
+
+[help.next]
+Page {page} of {pages} – next: /claim help {next}
+
+[help.first]
+Page {page} of {pages} – back to the start: /claim help
+
+[field.frozen]
+the claim is short of a slot – /claim pay or a donation first, then it grows again.
+
+[field.no_slot]
+that would need {need} claim slots, {have} are possible. More only if a friend donates (/claim donate).
+
+[field.none]
+there is no field of the claim in that direction.
+
+[field.anchor]
+the field with the {anchor} stays.
+
+[field.split]
+the claim would fall apart into two pieces.
+
+[field.cost]
+The next field to the {side} costs {steel} steel from the autolathe (in it: {have}){extra}. To confirm, type the same command again within 30 s, looking the same way.
+
+[field.done]
+A field to the {side} was added – {claim} now has {fields} fields ({area} m², {w} x {d} m).
+
+[field.done_shrink]
+A field to the {side} was taken away – {claim} now has {fields} fields ({area} m², {w} x {d} m).
+
+[field.left]
+ On your account: {area} m².
+
+[donate.off]
+There are no claim slots to donate on this server.
+
+[donate.usage]
+Stand on a friend's claim and type /claim donate <number> (0 to {max}; 0 takes your donation back).
+
+[donate.need_inside]
+Kindly stand on the claim you want to donate to.
+
+[donate.own]
+Your own claim uses your slots anyway.
+
+[donate.only_friends]
+Only registered friends may donate. Ask {owner}.
+
+[donate.not_enough]
+You do not have that many free claim slots ({free} of {max}).
+
+[donate.done]
+You now donate {n} slot(s) to {claim}. Free with you: {free}.
+
+[donate.back]
+Donation to {claim} taken back. Free with you: {free}.
+
+[donate.notify]
+{player} now donates {n} slot(s) to {claim}.
+
+[pay.nothing]
+None of your claims is short of a slot – there is nothing to pay.
+
+[pay.cost]
+Keeping {claim} as it is costs {steel} steel from the autolathe (in it: {have}) – five times the price of {built} m² of built area. To confirm, type /claim pay again within 30 s.
+
+[pay.done]
+Paid. {claim} stays as it is. It can only grow again once donations cover it all.
+
+[info.account]
+  Owner's account: {area} m²
+
+[info.slots]
+  Claim slots: uses {need} – {own} own, {donated} donated; free with the owner: {free} of {max}
+
+[penalty.title]
+{claim} is short of a claim slot
+
+[penalty.why]
+The claim is short of claim slots – usually because a friend took their donation back. It needs {need}; {missing} of them are not covered. Until this is settled it cannot grow.
+
+[penalty.pay]
+<b>Keep it:</b> /claim pay – costs {steel} steel from the {anchor} (five times the price of {built} m² of built area that would otherwise be lost).
+
+[penalty.or]
+<b>Otherwise</b> it shrinks after {time} of play (counted while you are online) to 50 x 50 m around the {anchor}. What you lose of your own area goes back on your account.
+
+[penalty.donate]
+If a friend donates a slot (/claim donate), that settles it too.
+
+[penalty.shrunk]
+{claim} has shrunk to {w} x {d} m.
+
+[penalty.shrunk_nothing]
+A claim slot was missing, and nothing stood outside 50 x 50 m around the {anchor} – so nothing was lost.
+
+[penalty.shrunk_unpaid]
+A claim slot was missing and the penalty was not paid. Whatever stands outside is no longer protected.
+
+[penalty.credit]
+{area} m² were credited to your account.
+
+[welcome_back_no_slot]
+Welcome back! {claim} stays derelict for now: all your {max} claim slots are in use meanwhile. Once one is free it is protected again – as long as nobody has taken it over.
+
+[donate.notify_back]
+{player} has taken their donation to {claim} back.

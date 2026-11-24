@@ -1,0 +1,918 @@
+# Verboten – Texte für Spieler. Deutsch (Amtsdeutsch mit Augenzwinkern, aber verlässlich).
+# Ein Text reicht von seiner [key]-Zeile bis zur nächsten. {Platzhalter} füllt der Mod – bitte stehen lassen.
+# Befehle (/claim …) bleiben englisch; Himmelsrichtungen, "gast"/"freund" und "aus" versteht er auch auf Deutsch.
+
+# ---------------------------------------------------------------- allgemeine Wörter
+
+[anchor.autolathe]
+Autolathe
+
+[anchor.flag]
+Flagge
+
+[claim.default_name]
+Basis von {owner}
+
+[size.max]
+{max} m
+
+[marker.name]
+Herrenlos: {claim}
+
+[role.owner]
+Besitzer (alles)
+
+[role.friend]
+Freund (alles außer Leute ein- und austragen)
+
+[role.guest]
+Gast (darf herein und Türen und Schalter benutzen – kein Bauen, keine Behälter)
+
+[role.none]
+kein Zutritt
+
+[dir.north]
+Norden
+
+[dir.north-east]
+Nordosten
+
+[dir.east]
+Osten
+
+[dir.south-east]
+Südosten
+
+[dir.south]
+Süden
+
+[dir.south-west]
+Südwesten
+
+[dir.west]
+Westen
+
+[dir.north-west]
+Nordwesten
+
+[side.north]
+Norden
+
+[side.east]
+Osten
+
+[side.south]
+Süden
+
+[side.west]
+Westen
+
+[hint.move]
+Gehen Sie etwa {m} m Richtung {dir}.
+
+[problem.landing]
+{m} m zu nah an der Landezone
+
+[problem.gap]
+{m} m zu nah an „{claim}“ (zwischen zwei Grundstücken sind {gap} m vorgeschrieben)
+
+[reach.min]
+eine Seite muss mindestens {m} m von der {anchor} entfernt sein
+
+[reach.max]
+eine Seite darf höchstens {m} m von der {anchor} entfernt sein
+
+[reach.span]
+ein Grundstück darf höchstens {max} groß sein
+
+[more]
+Alles Weitere: /claim help
+
+[join.rules]
+Betreten VERBOTEN! Fremde Basen nur mit Erlaubnis des Besitzers – Unbefugte werden nach {seconds} Sekunden erschossen – Verzeihung – des Servers verwiesen.
+
+[join.commands]
+Vor dem Bauen: /claim check – Grenzen: /claim show – Hausordnung: /claim help
+
+[join.abandoned]
+Herrenlose Grundstücke zu vergeben: {count}. Zum Fundbüro: /claim find
+
+[join.pin_locked]
+Sie melden sich von einer neuen Adresse an. Ihre Grundstücksrechte ruhen bis zur Eingabe Ihrer PIN: /claim pin <Ihre PIN>
+
+[join.rejected]
+Verboten: Zutritt verweigert ({reason}).
+
+[join.blocked]
+Hausverbot für weitere {minutes} Minute(n) wegen unbefugten Aufenthalts auf fremden Grundstücken
+
+# ---------------------------------------------------------------- Erklärungen (Fenster)
+
+[roles]
+Wer darf was auf Ihrem Grundstück:
+  Freunde: alles, außer Leute ein- oder austragen
+  Gäste: herein, Türen und Schalter benutzen – nicht bauen, nicht an Behälter
+  Alle anderen: müssen leider draußen bleiben.
+
+[expiry]
+Es bleibt geschützt, solange Sie oder ein Freund mindestens alle {days} Tage vorbeischauen. Danach gilt es als herrenlos und darf von anderen übernommen werden.
+
+[how.flags]
+Stecken Sie Ihr Grundstück ab: eine Flagge an jede Ecke ({flags} Flaggen). Die äußersten Flaggen bilden die Grenze, von {min} bis {max}. Eine weitere Flagge daneben verschiebt die Grenze nach außen, eine abgebaute nach innen.
+
+[how.growing]
+Bauen Sie Ihre {anchor} mitten in Ihre Basis: Sie schützt ein Feld von 10 x 10 m. Weitere Felder bauen Sie mit /claim grow an – {free} m² Startguthaben liegen auf Ihrem Konto.
+
+[how.fit]
+Bauen Sie Ihre {anchor} in Ihre Basis: Sie schützt alles, was Sie drumherum gebaut haben, plus 5 m – und wächst mit Ihrer Basis mit (bis {max}).
+
+[guide.title]
+Betreten VERBOTEN! Auf diesem Server sind Basen geschützt – bald auch Ihre.
+
+[guide.limits]
+Nicht zulässig: näher als {landing} m an der Landezone oder näher als {gap} m an einem anderen Grundstück.
+
+[guide.here]
+An dieser Stelle: {verdict}
+
+[guide.verdict.ok]
+möglich – Ihr Grundstück kann hier geschützt werden.
+
+[guide.verdict.ok_flags]
+möglich – eine Flagge an jede Ecke Ihrer Basis.
+
+[guide.verdict.abandoned]
+ein herrenloses Grundstück – bauen Sie Ihre {anchor} hier, und es gehört Ihnen.
+
+[guide.hint]
+Hier kann kein Grundstück geschützt werden: {problem}
+
+[created.title]
+Ihr Grundstück steht ab sofort unter Schutz: {claim}
+
+[created.size]
+{w} x {d} m – die Grenze ist 30 Sekunden lang markiert.
+
+[created.add]
+Freund eintragen: /claim add <Spieler>
+
+[created.move]
+Umzug der {anchor}: erst die neue auf dem Grundstück bauen, dann diese abbauen. Steht keine {anchor} mehr darauf, erlischt der Schutz.
+
+[pin.tip]
+Tipp: /claim pin <Code> (bis {max} Zeichen) – damit bleibt Ihr Grundstück Ihres, selbst wenn jemand Ihre Identität fälscht.
+
+[takenover.title]
+Dieses Grundstück gehört jetzt Ihnen: {claim}
+
+[takenover.size]
+{w} x {d} m. Der Vorbesitzer war zu lange abwesend. Die Grenze ist 30 Sekunden lang markiert.
+
+[takenover.add]
+  Freund eintragen:   /claim add <Spieler>
+
+[takenover.grow_meters]
+  Vergrößern:   in eine Richtung schauen und /claim grow tippen – je ein Feld von 10 x 10 m
+
+[takenover.grow_fit]
+  Es wächst mit, wenn Sie weiterbauen.
+
+[takenover.grow_staked]
+  Weitere Flaggen daneben verschieben die Grenze nach außen.
+
+[refused]
+Ihre {anchor} steht, aber diese Stelle kann nicht geschützt werden:
+{reason}
+
+[refused.tip]
+Tipp: /claim check (Bauvoranfrage) sagt es Ihnen vorher. Sie können die {anchor} wieder abbauen und woanders aufstellen.
+
+[stake.refused]
+Mit diesen Flaggen lässt sich hier kein Grundstück abstecken:
+{reason}
+
+[stake.refused.tip]
+Tipp: /claim check sagt es Ihnen vorher; /claim show zeigt Grenzen und Landezone.
+
+[ended]
+„{claim}“ steht nicht mehr unter Schutz: Die {anchor} wurde abgebaut oder zerstört, und es steht keine andere {anchor} darauf.
+
+Bauen Sie eine neue {anchor}, um Ihre Basis wieder zu schützen.
+
+[stake.ended]
+„{claim}“ steht nicht mehr unter Schutz: Es stehen weniger als {flags} Flaggen.
+
+Stecken Sie es mit Flaggen an den Ecken neu ab.
+
+# ---------------------------------------------------------------- Grundstücke: anlegen, vergrößern, Flaggen
+
+[anchor.backup]
+Diese {anchor} hält „{claim}“ am Leben, falls Sie die andere abbauen. Ihr Grundstück bleibt, wie es ist. Oder Sie melden ein weiteres an.
+
+[anchor.handover]
+„{claim}“ gehört jetzt zur {anchor} bei ({x}, {z}). Ihr Grundstück bleibt, wie es ist.
+
+[eval.inside]
+Sie befinden sich auf „{claim}“.
+
+[eval.limit]
+Alle Ihre {max} Ansprüche sind belegt (eigene Grundstücke oder gespendet). Für ein neues Grundstück muss erst einer frei werden.
+
+[eval.abandoned]
+Dies ist das herrenlose Grundstück von {owner} – Sie können es übernehmen.
+
+[eval.foreign]
+Hier stehen Bauteile von {player}. Fremde Basen kann man nicht anmelden.
+
+[eval.ok]
+Ihre Basis kann hier geschützt werden.
+
+[eval.created]
+„{claim}“ angelegt.
+
+[fit.note]
+Nicht Ihre ganze Basis ist abgedeckt – darin oder direkt daneben stehen Bauteile von: {players}. Wenn Sie gemeinsam bauen, tragen Sie diese als Freunde ein: /claim add <Spieler>
+
+[takeover.foreign]
+Zu viele Bauteile von {player} auf diesem Grundstück – eine Übernahme ist nicht möglich.
+
+[takeover.too_close]
+„{claim}“ ist zu nah herangewachsen – für eine Übernahme ist kein Platz mehr.
+
+[takeover.done]
+Dieses Grundstück gehört jetzt Ihnen: {claim}.
+
+[takeover.notice]
+Ihr Grundstück „{claim}“ wurde von {player} übernommen, weil Sie länger als {days} Tage abwesend waren.
+
+[grow.side_limit]
+{side}: {limit}.
+
+[foreign.zone]
+{player} hat dort gebaut – ein Grundstück hält {zone} m Abstand zu fremden Bauten.
+
+[stake.too_big]
+Ihre Flaggen umfassen {w} x {d} m – ein Grundstück darf höchstens {max} groß sein.
+
+[stake.too_big.hint]
+Rücken Sie die äußeren Flaggen näher zusammen.
+
+[stake.foreign]
+Innerhalb stehen Bauteile von {player}. Fremde Basen kann man nicht anmelden.
+
+[stake.done]
+„{claim}“ abgesteckt.
+
+[steel.no_lathe]
+Wer über die Freimeter hinaus vergrößert, zahlt mit Stahl aus der Autolathe des Grundstücks – hier steht keine.
+
+[steel.not_enough]
+Das kostet {need} Stahl, in der Autolathe sind aber nur {have}. Bitte erst Stahlbarren einlegen.
+
+[flags.resize]
+Dieses Grundstück ist mit Flaggen abgesteckt: Eine weitere Flagge daneben vergrößert es, eine abgebaute verkleinert es.
+
+[flag.cannot_move]
+Diese Flagge kann die Grenze von „{claim}“ nicht verschieben: {why}.
+
+[flag.moved]
+„{claim}“ reicht jetzt bis zu dieser Flagge: {w} x {d} m.
+
+[flag.too_far]
+Diese Flagge steht zu weit von Ihrem Grundstück entfernt (höchstens {max}).
+
+[flag.count]
+Flagge {n} von {flags}. Eine an jede Ecke Ihrer Basis – die äußersten bilden die Grenze.
+
+[flag.removed]
+Eine Flagge wurde abgebaut: „{claim}“ misst jetzt {w} x {d} m.
+
+# ---------------------------------------------------------------- Unbefugte, Schutz
+
+[trespass.approach]
+Achtung, Privatgrundstück: „{claim}“. Unbefugte werden nach {seconds} Sekunden des Servers verwiesen. Bauen und Abladen ist hier untersagt.
+
+[trespass.inside]
+Sie befinden sich unbefugt auf „{claim}“. Bitte verlassen Sie das Grundstück innerhalb von {seconds} Sekunden.
+
+[trespass.kicked]
+Sie wurden wegen unbefugten Aufenthalts auf „{claim}“ des Servers verwiesen. Ordnung muss sein.
+
+[trespass.blocked]
+Sie wurden wegen wiederholten unbefugten Aufenthalts auf „{claim}“ des Servers verwiesen. Hausverbot: {minutes} Minuten.
+
+[denied.attack]
+„{claim}“ ist Privatgrundstück. Angreifen und Verändern ist hier verboten.
+
+[denied.drop]
+„{claim}“ ist Privatgrundstück. Abladen und Werfen ist hier verboten.
+
+[denied.build]
+„{claim}“ ist Privatgrundstück. Bauen und Verändern ist hier verboten.
+
+[denied.take]
+„{claim}“ ist Privatgrundstück. Mitnehmen und Umräumen ist hier verboten.
+
+[denied.dig]
+„{claim}“ ist Privatgrundstück. Graben ist hier verboten.
+
+[denied.use]
+„{claim}“ ist Privatgrundstück. Benutzen ist hier verboten.
+
+[denied.other]
+„{claim}“ ist Privatgrundstück. Das ist hier verboten.
+
+[incident.entered]
+{player} hat das Grundstück unbefugt betreten
+
+[incident.attack]
+{player} wollte angreifen oder etwas verändern
+
+[incident.drop]
+{player} wollte etwas abladen oder werfen
+
+[incident.build]
+{player} wollte bauen oder etwas verändern
+
+[incident.take]
+{player} wollte etwas mitnehmen oder umräumen
+
+[incident.dig]
+{player} wollte graben
+
+[incident.use]
+{player} wollte etwas benutzen
+
+[incident.other]
+{player} hat etwas versucht
+
+[away]
+Besondere Vorkommnisse während Ihrer Abwesenheit: {list}.
+
+[away.repeat]
+{line} ({count}×)
+
+[landing.denied]
+In der Landezone dürfen auf diesem Server nur Admins bauen und abbauen.
+
+[marker.locked]
+Diese Bake kennzeichnet ein herrenloses Grundstück und darf nicht verändert werden.
+
+[cheats.disabled]
+Cheats sind auf diesem Server nicht vorgesehen.
+
+[cheat.kicked]
+Verbindung getrennt: Schummeln ist auf diesem Server verboten. Die Admins sind informiert.
+
+[chat.slow]
+Bitte nicht drängeln – ein Befehl pro Sekunde.
+
+[chat.player_suffix]
+(Spieler)
+
+# ---------------------------------------------------------------- Rückkehr, herrenlose Grundstücke
+
+[welcome_back]
+Willkommen zurück! „{claim}“ steht wieder unter Schutz.
+
+[welcome_back_failed]
+Willkommen zurück! „{claim}“ konnte nicht wieder geschützt werden – andere Grundstücke sind inzwischen zu nah.
+
+[abandoned.enter_take]
+Dieses Grundstück hat {owner} aufgegeben – es ist herrenlos. Mit /claim take gehört es Ihnen.
+
+[abandoned.enter_build]
+Dieses Grundstück hat {owner} aufgegeben – es ist herrenlos. Bauen Sie hier eine {anchor}, und es gehört Ihnen.
+
+# ---------------------------------------------------------------- /claim-Befehle
+
+[cmd.server_only]
+Grundstücke verwaltet der Server.
+
+[cmd.locked]
+Sie melden sich von einer neuen Adresse an. Bitte zuerst Ihre PIN: /claim pin <Ihre PIN>
+
+[cmd.error]
+Beim Ausführen ist ein Fehler aufgetreten (siehe Server-Log).
+
+[help.members]
+Freunde: {friends}   Gäste: {guests}
+
+[help.roles]
+Freunde: alles, außer Leute ein- oder austragen
+Gäste: herein, Türen und Schalter benutzen – sonst nichts
+Alle anderen: müssen leider draußen bleiben. Anfassen dürften sie ohnehin nichts.
+
+[help.expiry]
+Geschützt, solange Sie oder ein Freund mindestens alle {days} Tage vorbeischauen. Danach gilt es als herrenlos und darf übernommen werden.
+
+[info.need_inside]
+Für /claim info bitte auf dem Grundstück stehen.
+
+[info.not_inside]
+Sie befinden sich auf keinem Grundstück.
+
+[info.you]
+  Sie: {role}
+
+[info.expiry]
+  Bleibt geschützt, solange Besitzer oder ein Freund mindestens alle {days} Tage vorbeischauen.
+
+[info.next_meter_have]
+, in der Autolathe: {have}
+
+[need_character]
+Dafür brauchen Sie eine Spielfigur in der Welt.
+
+[need_character_borders]
+Um Grenzen zu sehen, brauchen Sie eine Spielfigur in der Welt.
+
+[check.abandoned_take]
+Hier möglich: {message} Mit /claim take übernehmen.
+
+[check.abandoned_build]
+Hier möglich: {message} Bauen Sie hier eine {anchor}.
+
+[check.flags]
+Hier möglich: eine Flagge an jede Ecke Ihrer Basis ({flags} Flaggen).
+
+[check.ok]
+Hier möglich – Bauvoranfrage genehmigt: Ihre {anchor} kann Ihre Basis hier schützen.
+
+[check.ok_size]
+Hier möglich – Bauvoranfrage genehmigt: Ihre {anchor} kann Ihre Basis hier schützen, etwa {w} x {d} m.
+
+[show.none]
+Im Umkreis von {range} m gibt es keine Grundstücke und keine Landezone.
+
+[show.some]
+{count} Grenze(n) in Ihrer Nähe werden 30 Sekunden lang angezeigt.
+
+[find.none]
+Derzeit gibt es keine herrenlosen Grundstücke.
+
+[find.inside]
+Sie stehen auf dem herrenlosen Grundstück von {owner}. /claim check sagt Ihnen, wie Sie es übernehmen.
+
+[find.nearest]
+Nächstes herrenloses Grundstück: „{claim}“, etwa {m} m Richtung {dir}.
+
+[take.not_inside]
+Zum Übernehmen bitte auf ein herrenloses Grundstück stellen (siehe /claim find).
+
+[take.no_anchor]
+Auf diesem Grundstück steht keine {anchor} mehr. Bauen Sie eine, um es zu übernehmen.
+
+[add.usage]
+Verwendung: /claim add <Spieler> [gast]
+
+[add.is_owner]
+{player} ist der Besitzer dieses Grundstücks.
+
+[add.done]
+{player} ist jetzt {role} auf „{claim}“.
+
+[add.refit]
+Das Grundstück umfasst jetzt auch den Teil von {player}: {w} x {d} m.
+
+[remove.usage]
+Verwendung: /claim remove <Spieler>
+
+[remove.not_member]
+{player} ist auf „{claim}“ nicht eingetragen.
+
+[remove.done]
+{player} wurde von „{claim}“ ausgetragen.
+
+[name.usage]
+Verwendung: /claim name <Name>   (höchstens {max} Zeichen)
+
+[name.taken]
+Ein Grundstück namens „{name}“ gibt es bereits.
+
+[name.done]
+Grundstück umbenannt in „{name}“.
+
+[resize.usage]
+Schauen Sie auf die Seite, die sich bewegen soll, und tippen Sie /claim {verb} <Meter> – z. B. /claim {verb} 5.
+
+[resize.fit]
+Auf diesem Server wachsen Grundstücke von selbst: Bauen Sie am Rand weiter, und die Grenze zieht mit (bis {max}).
+
+[resize.need_inside]
+Zum Ändern der Größe bitte auf dem Grundstück stehen.
+
+[resize.only_owner]
+Die Größe ändern darf nur der Besitzer ({owner}).
+
+[resize.not_possible]
+Nicht möglich: {error}
+
+[resize.no_lathe]
+Die Konten sind leer, und auf diesem Grundstück steht keine Autolathe, um mit Stahl zu bezahlen.
+
+[resize.cost_extra]
+ plus {area} m² vom Konto
+
+[resize.done]
+Die Seite im {side} ist {m} m hinausgerückt – „{claim}“ misst jetzt {w} x {d} m.
+
+[owner.usage]
+Verwendung: /claim owner <Spieler>
+
+[owner.need_inside]
+Bitte auf dem Grundstück stehen, das Sie übergeben möchten.
+
+[owner.only_owner]
+Übergeben darf nur der Besitzer ({owner}).
+
+[owner.already]
+{player} besitzt es bereits.
+
+[owner.limit]
+{player} hat nicht genug freie Ansprüche für dieses Grundstück.
+
+[owner.done]
+„{claim}“ gehört jetzt {player}. {old} ist dort als Freund eingetragen.
+
+[owner.notify]
+{old} hat Ihnen „{claim}“ übergeben.
+
+[delete.admin_only]
+/claim delete bitte auf dem eigenen Grundstück verwenden.
+
+[delete.need_inside]
+Zum Löschen bitte auf Ihrem Grundstück stehen.
+
+[delete.only_owner]
+Löschen darf nur der Besitzer ({owner}).
+
+[delete.done]
+„{claim}“ gelöscht. Die Fläche steht nicht mehr unter Schutz.
+
+[list.none]
+In dieser Welt gibt es keine Grundstücke.
+
+[list.count]
+{count} Grundstück(e):
+
+[describe.line]
+„{claim}“{state} – Besitzer {owner}, {w} x {d} m
+
+[describe.reach]
+ (N {n}, O {e}, S {s}, W {west} m von der {anchor})
+
+[describe.abandoned]
+ [HERRENLOS]
+
+[describe.friends]
+  Freunde: {list}
+
+[describe.guests]
+  Gäste: {list}
+
+[manage.need_inside]
+Dafür bitte auf Ihrem Grundstück stehen.
+
+[manage.only_owner]
+Das darf nur der Besitzer ({owner}).
+
+[admin.many]
+{text} besitzt {count} Grundstücke; bitte den Grundstücksnamen verwenden (siehe /claim list).
+
+[admin.none]
+Kein Grundstück und kein Besitzer „{text}“ gefunden.
+
+[resolve.empty]
+Bitte den Spieler nennen.
+
+[resolve.several]
+Mehrere Spieler heißen „{text}“. Bitte stattdessen die SteamID64 angeben.
+
+[resolve.none]
+Ein „{text}“ war noch nie auf diesem Server. Bitte den genauen Namen oder die SteamID64 angeben.
+
+[console.only_world]
+nur innerhalb einer Welt verfügbar.
+
+[console.client]
+Grundstücke verwaltet der Server; bitte /claim im Chat verwenden (Admins: serverrun claim ...).
+
+# ---------------------------------------------------------------- PIN
+
+[pin.console_usage]
+Verwendung in der Konsole: claim pin off <Spieler>  (entfernt die PIN eines Spielers)
+
+[pin.status_has]
+Sie haben eine PIN. Ändern: /claim pin <neu>   Entfernen: /claim pin aus
+
+[pin.status_none]
+Keine PIN hinterlegt. /claim pin <Code> (bis {max} Zeichen) schützt Ihre Grundstücke, falls jemand auf einem Server ohne Steam-Anmeldung Ihre Identität fälscht.
+
+[pin.admin_only]
+Fremde PINs entfernen dürfen nur Admins.
+
+[pin.none_for]
+{player} hat keine PIN.
+
+[pin.removed_for]
+Die PIN von {player} wurde entfernt.
+
+[pin.first]
+Bitte zuerst Ihre PIN: /claim pin <Ihre PIN>
+
+[pin.removed]
+Ihre PIN wurde entfernt.
+
+[pin.length]
+Eine PIN hat 1 bis {max} Zeichen.
+
+[pin.set]
+PIN hinterlegt. Melden Sie sich einmal von einer neuen Adresse an, genügt /claim pin <Ihre PIN>, und Ihre Grundstücke gehören wieder Ihnen.
+
+[pin.set_steam]
+ (Auf diesem Server bestätigt Steam, wer Sie sind – hier brauchen Sie sie nicht.)
+
+[pin.wait]
+Zu viele falsche PINs. Bitte in {minutes} Minute(n) erneut versuchen.
+
+[pin.wrong]
+PIN falsch.
+
+[pin.wrong_wait]
+PIN falsch. Nächster Versuch in {minutes} Minuten.
+
+[pin.ok]
+PIN korrekt – willkommen zurück. Ihre Grundstücke gehören wieder Ihnen.
+
+# ---------------------------------------------------------------- für den Host
+
+[host.protection_missing]
+Verboten: Der Schutz „{name}“ ist NICHT aktiv (Spielupdate?). Siehe Log oder 'claim status'.
+
+[host.feature_missing]
+Verboten: „{name}“ funktioniert nicht (Spielupdate?). Siehe Log oder 'claim status'.
+
+[host.claims_unreadable]
+Verboten konnte die Grundstücke dieses Spielstands nicht lesen. Alle Grundstücke sind AUS. Siehe Log.
+
+[host.console_failed]
+Verboten: Der Konsolenbefehl 'claim' konnte nicht eingerichtet werden (Spielupdate?).
+
+[guide.next]
+Ihre erste {anchor} schützt Ihre Basis, danach alles Weitere per: /claim help
+
+[guide.next_flags]
+Stecken Sie Ihre Basis mit {flags} Flaggen ab – eine an jede Ecke –, danach alles Weitere per: /claim help
+
+[help.window_title]
+Verboten – Hausordnung
+
+[help.yours]
+{claim} – {w} x {d} m – Sie: {role}
+
+[help.yours_none]
+Sie haben noch kein Grundstück.
+
+[help.slogan]
+Vertrauen ist gut, Verboten ist besser.
+
+[help.h_property]
+Ihr Grundstück
+
+[help.h_roles]
+Wer darf was
+
+[help.h_size]
+Größe
+
+[help.size_fit]
+Ein Grundstück umfasst alles, was Sie rund um Ihre {anchor} gebaut haben, plus 5 m, und wächst mit, wenn Sie weiterbauen – bis {max}.
+
+[help.size_flags]
+Eine Flagge an jede Ecke Ihrer Basis ({flags} Flaggen) – die äußersten bilden die Grenze, von 10 x 10 bis {max}. Eine weitere Flagge daneben verschiebt die Grenze nach außen, eine abgebaute nach innen.
+
+[help.not_permitted]
+<b>Nicht zulässig:</b> näher als {landing} m an der Landezone oder näher als {gap} m an einem anderen Grundstück.
+
+[help.moving]
+<b>Umzug der {anchor}:</b> erst die neue auf dem Grundstück bauen, dann die alte abbauen.
+
+[help.h_expiry]
+Verfall
+
+[help.h_commands]
+Befehle
+
+[help.cmd_look]
+/claim help [1–4] – diese Fenster
+/claim check – darf ich hier bauen? (Bauvoranfrage)
+/claim show – zeigt Grenzen in der Nähe für 30 Sekunden
+/claim find – das nächste herrenlose Grundstück
+/claim info – Angaben zum Grundstück, auf dem Sie stehen
+
+[help.cmd_grow]
+/claim grow – ein Feld (10 x 10 m) anbauen, in Blickrichtung
+
+[help.cmd_people]
+/claim add <Spieler> [gast] – Freund (oder Gast) eintragen
+/claim remove <Spieler> – jemanden austragen
+/claim name <Name> – Grundstück benennen
+
+[help.cmd_owning]
+/claim owner <Spieler> – Grundstück übergeben
+/claim delete – Grundstück aufgeben
+/claim take – herrenloses Grundstück übernehmen
+
+[help.cmd_pin]
+/claim pin <Code> – freiwillig: schützt Ihre Grundstücke, auch gegen gefälschte Identitäten
+
+[help.cmd_admin]
+<b>Admin:</b> /claim list · info · shrink (Blick auf das Feld) · delete · pin off <Spieler> · status
+
+[role_short.owner]
+Besitzer
+
+[role_short.friend]
+Freund
+
+[role_short.guest]
+Gast
+
+[role_short.none]
+Besucher
+
+[resize.shrink_admin]
+Verkleinern dürfen nur Admins – und nur Grundstücke, die nicht ihre eigenen sind.
+
+[verdict.no]
+nicht möglich – {reason}
+
+[check.no]
+Hier nicht möglich: {reason}
+
+[info.price]
+  Stahlpreis derzeit: {price} je m²
+
+[resize.done_shrink]
+Die Seite im {side} ist {m} m hereingerückt – „{claim}“ misst jetzt {w} x {d} m.
+
+[help.cmd_slots]
+/claim donate <Anzahl> – Ansprüche an das Grundstück spenden, auf dem Sie stehen (0 = zurücknehmen)
+/claim pay – Strafe zahlen, wenn Ihrem Grundstück ein Anspruch fehlt
+
+[help.yours_fields]
+{claim} – {fields} Felder, {w} x {d} m – Sie: {role}
+
+[help.slots_used]
+Belegt {need} Anspruch/Ansprüche – {own} von Ihnen
+
+[help.slots_used_donated]
+Belegt {need} Ansprüche – {own} von Ihnen, gespendet von: {donors}
+
+[help.penalty_open]
+Es fehlen {missing} Anspruch/Ansprüche: /claim pay – sonst schrumpft es in {time} (siehe /claim help 3).
+
+[help.free_slots]
+Freie Ansprüche: {free} von {max}
+
+[help.account]
+Fläche auf Ihrem Konto: {area} m²
+
+[help.you_donate]
+Sie spenden {n} an „{claim}“.
+
+[help.size_fields]
+Ein Grundstück beginnt mit einem Feld von 10 x 10 m rund um seine {anchor}. Vergrößert wird feldweise: in die gewünschte Richtung schauen und /claim grow tippen – das nächste Feld in dieser Richtung kommt dazu. So entstehen auch Formen wie L, T oder +. Jedes Feld kostet 100 m², bezahlt mit:
+1.<indent=1.4em>Ihrem Konto: {free} m² Startguthaben, dazu {perhour} m² je Stunde, die Sie online sind,</indent>
+2.<indent=1.4em>dann den Konten Ihrer Spender,</indent>
+3.<indent=1.4em>danach Stahl aus der {anchor} – /claim grow nennt den Preis und fragt, bevor etwas abgebucht wird.</indent>
+
+[help.h_map]
+Lageplan
+
+[help.map_north]
+N
+
+[help.map_legend]
+{field} Feld · {anchor} · • Sie
+
+[help.h_slots]
+Ansprüche
+
+[help.slots]
+Jeder hat {max} Ansprüche. Einer reicht für 50 x 50 m: Ein Grundstück braucht je angefangene 50 m in jede Richtung einen – 100 x 50 m sind zwei, 150 x 50 m drei. Sie können also mehrere Grundstücke haben oder wenige große. Ihre eigenen Grundstücke dürfen direkt aneinandergrenzen; zu fremden bleiben 10 m Abstand.
+
+[help.donate]
+<b>Spenden:</b> Freunde können dem Grundstück, auf dem sie eingetragen sind, Ansprüche spenden (/claim donate <Anzahl>). Dann darf es größer werden, und ihr Konto zahlt mit.
+
+[help.penalty]
+<b>Strafe:</b> Nimmt ein Freund seine Spende zurück (oder wird ausgetragen), springen zuerst Ihre freien Ansprüche ein. Reichen sie nicht, kann das Grundstück nicht mehr wachsen, und Sie haben {hours} Stunden – gezählt nur, solange Sie online sind: /claim pay zahlt das Fünffache des Preises für die bebaute Fläche, die sonst wegfiele – dann bleibt alles, wie es ist. Sonst schrumpft es auf 50 x 50 m um die Autolathe. Eine neue Spende hilft auch.
+
+[help.next]
+Seite {page} von {pages} – weiter: /claim help {next}
+
+[help.first]
+Seite {page} von {pages} – zurück zum Anfang: /claim help
+
+[field.frozen]
+dem Grundstück fehlt ein Anspruch – erst /claim pay oder eine Spende, dann wächst es wieder.
+
+[field.no_slot]
+dafür bräuchte es {need} Ansprüche, möglich sind {have}. Mehr gibt es nur, wenn ein Freund spendet (/claim donate).
+
+[field.none]
+in dieser Richtung liegt kein Feld des Grundstücks.
+
+[field.anchor]
+das Feld mit der {anchor} bleibt.
+
+[field.split]
+das Grundstück würde in zwei Teile zerfallen.
+
+[field.cost]
+Das nächste Feld im {side} kostet {steel} Stahl aus der Autolathe (vorhanden: {have}){extra}. Zur Bestätigung denselben Befehl innerhalb von 30 s noch einmal eingeben, mit Blick in dieselbe Richtung.
+
+[field.done]
+Ein Feld im {side} ist dazugekommen – „{claim}“ hat jetzt {fields} Felder ({area} m², {w} x {d} m).
+
+[field.done_shrink]
+Ein Feld im {side} ist weg – „{claim}“ hat jetzt {fields} Felder ({area} m², {w} x {d} m).
+
+[field.left]
+ Auf Ihrem Konto: {area} m².
+
+[donate.off]
+Auf diesem Server gibt es keine Ansprüche zum Spenden.
+
+[donate.usage]
+Auf dem Grundstück eines Freundes stehen und /claim donate <Anzahl> tippen (0 bis {max}; 0 nimmt Ihre Spende zurück).
+
+[donate.need_inside]
+Bitte auf dem Grundstück stehen, dem Sie spenden möchten.
+
+[donate.own]
+Ihr eigenes Grundstück nutzt Ihre Ansprüche ohnehin.
+
+[donate.only_friends]
+Spenden dürfen nur eingetragene Freunde. Fragen Sie {owner}.
+
+[donate.not_enough]
+So viele Ansprüche haben Sie nicht frei ({free} von {max}).
+
+[donate.done]
+Sie spenden jetzt {n} Anspruch/Ansprüche an „{claim}“. Frei bei Ihnen: {free}.
+
+[donate.back]
+Spende an „{claim}“ zurückgenommen. Frei bei Ihnen: {free}.
+
+[donate.notify]
+{player} spendet jetzt {n} Anspruch/Ansprüche an „{claim}“.
+
+[pay.nothing]
+Keinem Ihrer Grundstücke fehlt ein Anspruch – es gibt nichts zu zahlen.
+
+[pay.cost]
+„{claim}“ behalten, wie es ist, kostet {steel} Stahl aus der Autolathe (vorhanden: {have}) – fünffacher Preis für {built} m² bebaute Fläche. Zur Bestätigung /claim pay innerhalb von 30 s noch einmal eingeben.
+
+[pay.done]
+Bezahlt. „{claim}“ bleibt, wie es ist. Wachsen kann es erst wieder, wenn Spenden alles abdecken.
+
+[info.account]
+  Konto des Besitzers: {area} m²
+
+[info.slots]
+  Ansprüche: belegt {need} – {own} eigene, {donated} gespendet; frei beim Besitzer: {free} von {max}
+
+[penalty.title]
+„{claim}“ fehlt ein Anspruch
+
+[penalty.why]
+Dem Grundstück fehlen Ansprüche – meist, weil ein Freund seine Spende zurückgenommen hat. Es braucht {need}, davon sind {missing} nicht gedeckt. Bis das geklärt ist, kann es nicht wachsen.
+
+[penalty.pay]
+<b>Behalten:</b> /claim pay – kostet {steel} Stahl aus der {anchor} (der fünffache Preis für {built} m² bebaute Fläche, die sonst wegfiele).
+
+[penalty.or]
+<b>Sonst</b> schrumpft es nach {time} Spielzeit (gezählt, solange Sie online sind) auf 50 x 50 m um die {anchor}. Was Ihnen dabei an eigener Fläche verloren geht, kommt auf Ihr Konto.
+
+[penalty.donate]
+Spendet ein Freund einen Anspruch (/claim donate), ist die Sache ebenfalls erledigt.
+
+[penalty.shrunk]
+„{claim}“ ist auf {w} x {d} m geschrumpft.
+
+[penalty.shrunk_nothing]
+Ein Anspruch fehlte, und außerhalb von 50 x 50 m um die {anchor} stand nichts – es ging also nichts verloren.
+
+[penalty.shrunk_unpaid]
+Ein Anspruch fehlte, und die Strafe wurde nicht bezahlt. Was außerhalb steht, ist nicht mehr geschützt.
+
+[penalty.credit]
+{area} m² wurden Ihrem Konto gutgeschrieben.
+
+[welcome_back_no_slot]
+Willkommen zurück! „{claim}“ bleibt vorerst herrenlos: Alle Ihre {max} Ansprüche sind inzwischen belegt. Wird einer frei, steht es wieder unter Schutz – solange es niemand übernommen hat.
+
+[donate.notify_back]
+{player} hat die Spende an „{claim}“ zurückgenommen.

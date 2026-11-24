@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>Verboten</AssemblyName>
+    <RootNamespace>Verboten</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Version>0.2.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <!-- Pfad zur Spielinstallation; per -p:GameDir=... überschreibbar -->
+    <GameDir Condition="'$(GameDir)' == ''">$(MSBuildThisFileDirectory)..\Stationeers</GameDir>
+    <ManagedDir>$(GameDir)\rocketstation_Data\Managed</ManagedDir>
+    <BepInExDir>$(GameDir)\BepInEx\core</BepInExDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" HintPath="$(ManagedDir)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(ManagedDir)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(ManagedDir)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.PhysicsModule" HintPath="$(ManagedDir)\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="UniTask" HintPath="$(ManagedDir)\UniTask.dll" Private="false" />
+    <Reference Include="Brutal.RakNet" HintPath="$(ManagedDir)\Brutal.RakNet.dll" Private="false" />
+    <Reference Include="BepInEx" HintPath="$(BepInExDir)\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(BepInExDir)\0Harmony.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="About\**" CopyToOutputDirectory="PreserveNewest" />
+    <!-- All texts players read, one file per language, built into the DLL -->
+    <EmbeddedResource Include="src\Lang\*.txt" LogicalName="Verboten.Lang.%(Filename).txt" />
+    <!-- Test project lives in tests/ and builds on its own -->
+    <Compile Remove="tests\**" />
+    <None Remove="tests\**" />
+  </ItemGroup>
+
+  <!--
+    Deploy for local testing:  dotnet build -c Release -p:Deploy=true
+    Copies the mod to the game's local mods folder (same layout as a Workshop mod:
+    About/About.xml + Verboten.dll). Enable it once in the game's mod list.
+    Another target folder:      -p:ModsDir="D:\somewhere"
+  -->
+  <PropertyGroup>
+    <ModsDir Condition="'$(ModsDir)' == ''">$(USERPROFILE)\Documents\My Games\Stationeers\mods</ModsDir>
+    <ModTargetDir>$(ModsDir)\$(AssemblyName)</ModTargetDir>
+  </PropertyGroup>
+
+  <Target Name="DeployMod" AfterTargets="Build" Condition="'$(Deploy)' == 'true'">
+    <ItemGroup>
+      <_ModFiles Include="$(TargetDir)$(AssemblyName).dll;$(TargetDir)$(AssemblyName).pdb" />
+      <_ModAbout Include="$(MSBuildThisFileDirectory)About\**" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_ModFiles)" DestinationFolder="$(ModTargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(_ModAbout)" DestinationFolder="$(ModTargetDir)\About\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Verboten deployed to $(ModTargetDir)" />
+  </Target>
+
+</Project>
